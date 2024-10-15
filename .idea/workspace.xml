@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a0ec4e-cd10-4b38-ad8e-7a49e06cb7c4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="75a0ec4e-cd10-4b38-ad8e-7a49e06cb7c4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,24 +21,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ACTIVE_CLOUD_PROJECT_ACCOUNT&quot;: &quot;chigozie.boniface@incubeta.com&quot;,
-    &quot;ACTIVE_CLOUD_PROJECT_ID&quot;: &quot;uk-data-pipeline-alpha&quot;,
-    &quot;ACTIVE_CLOUD_PROJECT_NAME&quot;: &quot;uk-tech-app-datapipeline-alpha&quot;,
-    &quot;ACTIVE_CLOUD_PROJECT_NUMBER&quot;: &quot;341566395206&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.google.cloudcode.ide_session_index&quot;: &quot;20241015_0003&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/chigozie/Documents/GitHub/prod-fivetran-microsoft-dbt-package&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ACTIVE_CLOUD_PROJECT_ACCOUNT": "chigozie.boniface@incubeta.com",
+    "ACTIVE_CLOUD_PROJECT_ID": "uk-data-pipeline-alpha",
+    "ACTIVE_CLOUD_PROJECT_NAME": "uk-tech-app-datapipeline-alpha",
+    "ACTIVE_CLOUD_PROJECT_NUMBER": "341566395206",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.google.cloudcode.ide_session_index": "20241015_0005",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/chigozie/Documents/GitHub/prod-fivetran-microsoft-dbt-package",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="dbt.Run dbt build">
     <configuration name="Run dbt build" type="DbtRunConfiguration" factoryName="DbtRunConfiguration">
       <option name="dbtCommand" value="build" />
@@ -85,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728981793694</updated>
       <workItem from="1728981794694" duration="197000" />
-      <workItem from="1728983449686" duration="2499000" />
+      <workItem from="1728983449686" duration="13644000" />
     </task>
     <servers />
   </component>
