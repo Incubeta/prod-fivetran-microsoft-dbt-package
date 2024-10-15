@@ -59,7 +59,7 @@ LEFT JOIN (
     number account_number,
     parent_customer_id customer_id
   FROM
-    {{ source('microsoft', 'account_history') }} B
+    {{ source('microsoft', 'account_history') }}) B
 ON
   A.account_id=B.id
 LEFT JOIN (
@@ -67,7 +67,7 @@ LEFT JOIN (
     DISTINCT id,
     type,
   FROM
-    {{ source('microsoft', 'campaign_history') }} C
+    {{ source('microsoft', 'campaign_history') }}) C
 ON
   A.campaign_id=C.id
 LEFT JOIN (
