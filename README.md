@@ -1,7 +1,7 @@
 # Fivetran Microsoft Ads dbt package
 
 ## What does this dbt package do?
-* Materializes the Microsoft Ads 360 RAW_main tables using the data coming from the Microsoft API.
+* Materializes the Microsoft Ads RAW_main tables using the data coming from the Microsoft API.
 
 ## How do I use the dbt package?
 ### Step 1: Prerequisites
