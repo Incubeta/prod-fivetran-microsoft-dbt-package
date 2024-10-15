@@ -33,3 +33,10 @@ models:
     # Config indicated by + and applies to all files under models/microsoft/
     microsoft:
       +materialized: table
+
+# Define variables here
+vars:
+  campaign_performance_daily_report_identifier: campaign_performance_daily_report
+  account_history_identifier: account_history
+  campaign_history_identifier: campaign_history
+  account_impression_performance_daily_report_identifier: account_impression_performance_daily_report
