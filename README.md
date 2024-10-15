@@ -1,10 +1,55 @@
-Welcome to your new dbt project!
+# Fivetran Microsoft Ads dbt package
 
-### Using the starter project
+## What does this dbt package do?
+* Materializes the Microsoft Ads 360 RAW_main tables using the data coming from the Microsoft API.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## How do I use the dbt package?
+### Step 1: Prerequisites
+To use this dby package, you must have the following:
+- At least one Fivetran Microsoft connector syncing data for at least one of the predefined reports:
+    - campaign_performance_daily_report
+    - keyword_performance_daily_report
+- A BigQuery data destination
+
+### Step 2: Install the package
+Include the following microsoft package version in your `packages.yml` file
+
+### Step 3: Define input tables variables
+This package reads the microsoft/bings data from the different tables created by the microsoft ads connector. 
+The names of the tables can be changed by setting the correct name in the root `dbt_project.yml` file.
+
+The following table shows the configuration keys and the default table names:
+
+|key|default|
+|---|-------|
+|campaign_performance_daily_report_identifier|campaign_performance_daily_report|
+|keyword_performance_daily_report_identifier|keyword_performance_daily_report|
+
+
+If the connector uses different table names (for example sa360_campaign_performance_v2) this can be set in the `dbt_project.yml` as follows.
+
+```yaml
+vars:
+    campaign_performance_daily_report_identifier: campaign_performance_daily_report 
+```
+
+### (Optional) Step 4: Additional configurations
+
+#### Disable reports:
+Individual reports can be disabled in the `dbt_project.yml` file.
+
+```yaml
+vars:
+    
+```
+
+#### Change output tables:
+The following vars can be used to change the output table names:
+
+|key| default                           |
+|---|-----------------------------------|
+|campaign_performance_daily_report_alias| microsoft-campaign_performance-v1 |
+|keyword_performance_daily_report_alias| microsoft-keyword_performance-v1  |
 
 
 ### Resources:
