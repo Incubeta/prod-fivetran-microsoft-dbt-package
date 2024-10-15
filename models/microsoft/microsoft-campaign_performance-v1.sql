@@ -2,7 +2,7 @@
   config(
     alias= var('microsoft_campaign_performance_v1_alias','microsoft-campaign_performance-v1-test'),
     partition_by={
-      "field": "date",
+      "field": "TimePeriod",
       "data_type": "date",
       "granularity": "day"
     }
