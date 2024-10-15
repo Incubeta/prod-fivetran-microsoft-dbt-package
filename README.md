@@ -9,6 +9,9 @@ To use this dby package, you must have the following:
 - At least one Fivetran Microsoft connector syncing data for at least one of the predefined reports:
     - campaign_performance_daily_report
     - keyword_performance_daily_report
+    - account_history
+    - campaign_history
+    - account_impression_performance_daily_report
 - A BigQuery data destination
 
 ### Step 2: Install the package
@@ -24,13 +27,19 @@ The following table shows the configuration keys and the default table names:
 |---|-------|
 |campaign_performance_daily_report_identifier|campaign_performance_daily_report|
 |keyword_performance_daily_report_identifier|keyword_performance_daily_report|
+|account_history_identifier|account_history|
+|campaign_history_identifier|campaign_history|
+|account_impression_performance_daily_report_identifier|account_impression_performance_daily_report|
 
 
-If the connector uses different table names (for example sa360_campaign_performance_v2) this can be set in the `dbt_project.yml` as follows.
+If the connector uses different table names (for example campaign_performance_daily_report) this can be set in the `dbt_project.yml` as follows.
 
 ```yaml
 vars:
     campaign_performance_daily_report_identifier: campaign_performance_daily_report 
+    account_history_identifier: account_history
+    campaign_history_identifier: campaign_history
+    account_impression_performance_daily_report_identifier: account_impression_performance_daily_report
 ```
 
 ### (Optional) Step 4: Additional configurations
