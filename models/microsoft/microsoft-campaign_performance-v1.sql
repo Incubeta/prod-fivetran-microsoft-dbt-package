@@ -1,14 +1,7 @@
 {{
-  config(
+  custom_config(
     alias=var('microsoft_campaign_performance_v1_alias','microsoft-campaign_performance-v1-test'),
-    materialized="incremental",
-    incremental_strategy="insert_overwrite",
-    partition_by={
-      "field": "TimePeriod",
-      "data_type": "date",
-      "granularity": "day"
-    }
-  )
+    )
 }}
 
 WITH
