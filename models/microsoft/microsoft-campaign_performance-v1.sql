@@ -122,3 +122,11 @@ ON
     AND A.device_type=D.device_type
     AND A.network=D.network
     AND A.currency_code=D.currency_code
+LEFT JOIN (
+    SELECT DISTINCT
+      customer_id,
+      customer_name
+    FROM
+      `uk-data-cli-superdrug.dpl_uk_data_cli_superdrug_bingads.` ) E
+  ON
+    B.customer_id=E.customer_id
