@@ -113,7 +113,7 @@ LEFT JOIN (
     SUM(absolute_top_impression_share_percent) absolute_top_impression_share_percent,
     SUM(top_impression_share_percent) top_impression_share_percent,
   FROM
-    {{ source('microsoft', 'account_impression_performance_daily_report') }}
+    {{ source('microsoft', 'campaign_impression_performance_daily_report') }}
     GROUP BY 1,2,3,4,5,6) D
 ON
     A.campaign_id=D.campaign_id
