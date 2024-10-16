@@ -91,7 +91,7 @@ LEFT JOIN (
   FROM
     {{ source('microsoft', 'account_history') }}) B
 ON
-  A.account_id=B.id
+    A.account_id=B.id
 LEFT JOIN (
   SELECT
     DISTINCT id,
@@ -99,23 +99,26 @@ LEFT JOIN (
   FROM
     {{ source('microsoft', 'campaign_history') }}) C
 ON
-  A.campaign_id=C.id
+    A.campaign_id=C.id
 LEFT JOIN (
   SELECT
-    account_id,
     date,
+    account_id,
+    campaign_id,
     device_type,
     network,
     currency_code,
     SUM(click_share_percent) click_share_percent,
     SUM(impression_share_percent) impression_share_percent,
-    SUM(absolute_top_impression_share_percent) absolute_top_impression_share_percent
+    SUM(absolute_top_impression_share_percent) absolute_top_impression_share_percent,
+    SUM(top_impression_share_percent) top_impression_share_percent,
   FROM
     {{ source('microsoft', 'account_impression_performance_daily_report') }}
-    GROUP BY 1,2,3,4,5) D
+    GROUP BY 1,2,3,4,5,6) D
 ON
-  A.account_id=D.account_id
-  AND A.date=D.date
-  AND A.device_type=D.device_type
-  AND A.network=D.network
-  AND A.currency_code=D.currency_code
+    A.campaign_id=D.campaign_id
+    AND A.account_id=D.account_id
+    AND A.date=D.date
+    AND A.device_type=D.device_type
+    AND A.network=D.network
+    AND A.currency_code=D.currency_code
