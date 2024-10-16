@@ -39,5 +39,5 @@ vars:
   campaign_performance_daily_report_identifier: campaign_performance_daily_report
   account_history_identifier: account_history
   campaign_history_identifier: campaign_history
-  account_impression_performance_daily_report_identifier: account_impression_performance_daily_report
+  account_impression_performance_daily_report_identifier: campaign_impression_performance_daily_report
   microsoft_campaign_performance_v1_alias: microsoft-campaign_performance-v1-test

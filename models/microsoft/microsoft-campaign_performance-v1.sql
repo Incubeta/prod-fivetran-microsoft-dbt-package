@@ -1,6 +1,8 @@
 {{
   config(
-    alias= var('microsoft_campaign_performance_v1_alias','microsoft-campaign_performance-v1-test'),
+    alias=var('microsoft_campaign_performance_v1_alias','microsoft-campaign_performance-v1-test'),
+    materialized="incremental",
+    incremental_strategy="insert_overwrite",
     partition_by={
       "field": "TimePeriod",
       "data_type": "date",
@@ -8,6 +10,41 @@
     }
   )
 }}
+
+WITH
+  campaign_perf_report AS (
+  SELECT
+    device_type,
+    campaign_id,
+    campaign_name,
+    campaign_status,
+    currency_code,
+    account_id,
+    ad_distribution,
+    custom_parameters,
+    network,
+    date,
+    SUM(clicks) clicks,
+    SUM(conversions) conversions,
+    SUM(impressions) impressions,
+    SUM(revenue) revenue,
+    SUM(spend) spend,
+    SUM(all_conversions) all_conversions,
+    SUM(all_revenue) all_revenue,
+    SUM(average_position) average_position,
+    SUM(historical_quality_score) historical_quality_score,
+    SUM(landing_page_experience) landing_page_experience,
+    SUM(low_quality_clicks) low_quality_clicks,
+    SUM(low_quality_conversions) low_quality_conversions,
+    SUM(low_quality_general_clicks) low_quality_general_clicks,
+    SUM(low_quality_impressions) low_quality_impressions,
+    SUM(phone_calls) phone_calls,
+    SUM(phone_impressions) phone_impressions,
+    SUM(quality_score) quality_score,
+    SUM(view_through_conversions) view_through_conversions,
+  FROM
+    {{ source('microsoft', 'campaign_performance_daily_report') }}
+  GROUP BY 1,2,3,4,5,6,7,8,9,10)
 
 SELECT
     SAFE_CAST(A.device_type AS STRING ) DeviceType,
@@ -51,7 +88,7 @@ SELECT
     SAFE_CAST(NULL AS STRING ) TopImpressionSharePercent,
     SAFE_CAST(absolute_top_impression_share_percent AS STRING ) AbsoluteTopImpressionSharePercent,
 FROM
-    {{ source('microsoft', 'campaign_performance_daily_report') }} A
+     campaign_perf_report A
 LEFT JOIN (
   SELECT
     name account_name,

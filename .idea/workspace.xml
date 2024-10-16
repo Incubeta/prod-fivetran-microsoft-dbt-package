@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a0ec4e-cd10-4b38-ad8e-7a49e06cb7c4" name="Changes" comment="" />
+    <list default="true" id="75a0ec4e-cd10-4b38-ad8e-7a49e06cb7c4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbt_project.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dbt_project.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/microsoft/microsoft-campaign_performance-v1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/models/microsoft/microsoft-campaign_performance-v1.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +17,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;chigozieboniface&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;org-96522315@github.com:Incubeta/prod-fivetran-microsoft-dbt-package.git&quot;,
+    &quot;accountId&quot;: &quot;e7ff3bb0-7099-45f3-bac4-ea251a2f1354&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -28,7 +44,7 @@
     "ACTIVE_CLOUD_PROJECT_NAME": "uk-tech-app-datapipeline-alpha",
     "ACTIVE_CLOUD_PROJECT_NUMBER": "341566395206",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.google.cloudcode.ide_session_index": "20241015_0005",
+    "com.google.cloudcode.ide_session_index": "20241016_0001",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/chigozie/Documents/GitHub/prod-fivetran-microsoft-dbt-package",
     "node.js.detected.package.eslint": "true",
@@ -84,6 +100,8 @@
       <updated>1728981793694</updated>
       <workItem from="1728981794694" duration="197000" />
       <workItem from="1728983449686" duration="13644000" />
+      <workItem from="1729007940812" duration="7802000" />
+      <workItem from="1729074487503" duration="1337000" />
     </task>
     <servers />
   </component>
