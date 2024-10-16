@@ -41,3 +41,4 @@ vars:
   campaign_history_identifier: campaign_history
   campaign_impression_performance_daily_report_identifier: campaign_impression_performance_daily_report
   microsoft_campaign_performance_v1_alias: microsoft-campaign_performance-v1-test
+  keyword_performance_daily_report_identifier: keyword_performance_daily_report

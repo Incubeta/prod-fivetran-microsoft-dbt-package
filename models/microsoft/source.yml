@@ -13,3 +13,5 @@ sources:
         identifier: "{{ var('destination_url_performance_daily_report_identifier', 'destination_url_performance_daily_report') }}"
       - name: campaign_impression_performance_daily_report
         identifier: "{{ var('campaign_impression_performance_daily_report_identifier', 'campaign_impression_performance_daily_report') }}"
+      - name: keyword_performance_daily_report
+        identifier: "{{ var('keyword_performance_daily_report_identifier', 'keyword_performance_daily_report') }}"
