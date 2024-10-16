@@ -41,7 +41,7 @@ WITH
 
 SELECT
     SAFE_CAST(A.device_type AS STRING ) DeviceType,
-    SAFE_CAST(campaign_id AS STRING ) CampaignId,
+    SAFE_CAST(A.campaign_id AS STRING ) CampaignId,
     SAFE_CAST(conversions AS STRING ) Conversions,
     SAFE_CAST(A.date AS DATE ) TimePeriod,
     SAFE_CAST(account_name AS STRING ) AccountName,
