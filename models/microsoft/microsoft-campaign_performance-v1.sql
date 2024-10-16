@@ -78,7 +78,7 @@ SELECT
     SAFE_CAST(view_through_conversions AS STRING ) ViewThroughConversions,
     SAFE_CAST(click_share_percent AS STRING ) ClickSharePercent,
     SAFE_CAST(impression_share_percent AS STRING ) ImpressionSharePercent,
-    SAFE_CAST(NULL AS STRING ) TopImpressionSharePercent,
+    SAFE_CAST(top_impression_share_percent AS STRING ) TopImpressionSharePercent,
     SAFE_CAST(absolute_top_impression_share_percent AS STRING ) AbsoluteTopImpressionSharePercent,
 FROM
      campaign_perf_report A
