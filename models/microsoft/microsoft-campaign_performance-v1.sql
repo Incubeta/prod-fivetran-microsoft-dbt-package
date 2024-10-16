@@ -1,7 +1,7 @@
 {{
   custom_config(
     alias=var('microsoft_campaign_performance_v1_alias','microsoft-campaign_performance-v1-test'),
-    )
+    field="TimePeriod")
 }}
 
 WITH

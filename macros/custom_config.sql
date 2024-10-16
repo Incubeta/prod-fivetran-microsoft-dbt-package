@@ -4,6 +4,7 @@
     alias=alias,
     materialized="incremental",
     incremental_strategy="insert_overwrite",
+    unique_key=field,
     partition_by={
       "field": field,
       "data_type": "date",
