@@ -90,7 +90,7 @@ LEFT JOIN (
     parent_customer_id customer_id
   FROM
     {{ source('microsoft', 'account_history') }}) B
-ON
+  ON
     A.account_id=B.id
 LEFT JOIN (
   SELECT
@@ -98,7 +98,7 @@ LEFT JOIN (
     type,
   FROM
     {{ source('microsoft', 'campaign_history') }}) C
-ON
+  ON
     A.campaign_id=C.id
 LEFT JOIN (
   SELECT
@@ -115,7 +115,7 @@ LEFT JOIN (
   FROM
     {{ source('microsoft', 'campaign_impression_performance_daily_report') }}
     GROUP BY 1,2,3,4,5,6) D
-ON
+  ON
     A.campaign_id=D.campaign_id
     AND A.account_id=D.account_id
     AND A.date=D.date
@@ -123,10 +123,10 @@ ON
     AND A.network=D.network
     AND A.currency_code=D.currency_code
 LEFT JOIN (
-    SELECT DISTINCT
-      customer_id,
-      customer_name
-    FROM
-      `uk-data-cli-superdrug.dpl_uk_data_cli_superdrug_bingads.` ) E
+  SELECT DISTINCT
+    customer_id,
+    customer_name
+  FROM
+      {{ source('microsoft', 'destination_url_performance_daily_report') }}) E
   ON
     B.customer_id=E.customer_id
