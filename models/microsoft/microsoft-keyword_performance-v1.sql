@@ -36,7 +36,7 @@ SELECT
   SAFE_CAST(average_position AS STRING) AveragePosition,
   SAFE_CAST(goal AS STRING) Goal,
 FROM
-  FROM {{ source('microsoft', 'keyword_performance_daily_report') }} A
+  {{ source('microsoft', 'keyword_performance_daily_report') }} A
 LEFT JOIN (
   SELECT
     DISTINCT id keyword_id,
