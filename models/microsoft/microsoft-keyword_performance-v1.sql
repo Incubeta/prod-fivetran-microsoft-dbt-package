@@ -1,6 +1,6 @@
 {{
   custom_config(
-    alias=var('microsoft_keyword_performance_v1_alias','microsoft-keyword_performance-v1-test'),
+    alias=var('microsoft_keyword_performance_v1_alias','microsoft-keyword_performance-v1'),
     field="TimePeriod")
 }}
 
