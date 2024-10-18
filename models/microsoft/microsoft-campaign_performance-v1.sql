@@ -22,6 +22,7 @@ WITH
     SUM(impressions) impressions,
     SUM(revenue) revenue,
     SUM(spend) spend,
+    SUM(ad_relevance) ad_relevance,
     SUM(all_conversions) all_conversions,
     SUM(all_revenue) all_revenue,
     SUM(average_position) average_position,
