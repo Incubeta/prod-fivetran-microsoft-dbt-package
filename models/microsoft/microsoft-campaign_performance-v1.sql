@@ -53,6 +53,7 @@ SELECT
     SAFE_CAST(A.account_id AS STRING ) AccountId,
     SAFE_CAST(account_number AS STRING ) AccountNumber,
     SAFE_CAST(ad_distribution AS STRING ) AdDistribution,
+    SAFE_CAST(ad_relevance AS STRING ) AdRelevance,
     SAFE_CAST(all_conversions AS STRING ) AllConversions,
     SAFE_CAST(all_revenue AS STRING ) AllRevenue,
     SAFE_CAST(average_position AS STRING ) AveragePosition,
