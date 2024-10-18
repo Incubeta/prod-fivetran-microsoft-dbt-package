@@ -45,5 +45,4 @@ vars:
   keyword_performance_daily_report_identifier: keyword_performance_daily_report
   goals_and_funnels_daily_report_identifier: goals_and_funnels_daily_report
   destination_url_performance_daily_report_identifier: destination_url_performance_daily_report
-  microsoft_campaign_performance_v1_alias: microsoft-campaign_performance-v1
-  microsoft_keyword_performance_v1_alias: microsoft-keyword_performance-v1
+
