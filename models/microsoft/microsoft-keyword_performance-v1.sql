@@ -34,7 +34,7 @@ SELECT
   SAFE_CAST(keyword_status AS STRING) KeywordStatus,
   SAFE_CAST(quality_score AS STRING) QualityScore,
   SAFE_CAST(average_position AS STRING) AveragePosition,
-  SAFE_CAST(goal AS STRING) Goal,
+  SAFE_CAST(NULL AS STRING) Goal,
 FROM
   {{ source('microsoft', 'keyword_performance_daily_report') }} A
 LEFT JOIN (
@@ -75,19 +75,4 @@ LEFT JOIN (
     {{ source('microsoft', 'campaign_history') }} ) E
 ON
   A.campaign_id=E.campaign_id
-LEFT JOIN (
-  SELECT
-    DISTINCT date,
-    account_id,
-    ad_group_id,
-    campaign_id,
-    keyword_id,
-    goal,
-  FROM
-    {{ source('microsoft', 'goals_and_funnels_daily_report') }} ) F
-ON
-  A.date=F.date
-  AND A.account_id=F.account_id
-  AND A.ad_group_id=F.ad_group_id
-  AND A.campaign_id=F.campaign_id
-  AND A.keyword_id=F.keyword_id
+
