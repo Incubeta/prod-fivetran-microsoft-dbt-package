@@ -19,6 +19,3 @@ sources:
         identifier: "{{ var('destination_url_performance_daily_report_identifier', 'destination_url_performance_daily_report') }}"
       - name: keyword_performance_daily_report
         identifier: "{{ var('keyword_performance_daily_report_identifier', 'keyword_performance_daily_report') }}"
-      - name: goals_and_funnels_daily_report
-        identifier: "{{ var('goals_and_funnels_daily_report_identifier', 'goals_and_funnels_daily_report') }}"
-
