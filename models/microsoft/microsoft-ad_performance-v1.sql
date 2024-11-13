@@ -38,7 +38,7 @@ WITH
     campaign_id,
     name ad_group_name,
   FROM
-    `au-data-cli-fredhollowsfound.dpl_au_data_cli_fredhollowsfound_bingads.ad_group_history` ),
+    {{ source('microsoft', 'ad_group_history') }} ),
 
   campaign_history AS (
   SELECT
@@ -47,7 +47,7 @@ WITH
     name campaign_name,
     type campaign_type,
   FROM
-    {{ source('microsoft', 'campaign_performance_daily_report') }} ),
+    {{ source('microsoft', 'campaign_history') }} ),
   account_history AS (
   SELECT
     name account_name,
