@@ -22,7 +22,7 @@ WITH
     revenue,
     average_position
   FROM
-    `au-data-cli-fredhollowsfound.dpl_au_data_cli_fredhollowsfound_bingads.ad_performance_daily_report`),
+    {{ source('microsoft', 'ad_performance_daily_report') }} ),
 
   ad_history AS (
   SELECT
@@ -30,7 +30,7 @@ WITH
     ad_group_id,
     title ad_title,
   FROM
-    `au-data-cli-fredhollowsfound.dpl_au_data_cli_fredhollowsfound_bingads.ad_history` ),
+    {{ source('microsoft', 'ad_history') }} ),
 
   ad_group_history AS (
   SELECT
@@ -48,6 +48,7 @@ WITH
     type campaign_type,
   FROM
     {{ source('microsoft', 'campaign_history') }} ),
+
   account_history AS (
   SELECT
     name account_name,
@@ -57,7 +58,7 @@ WITH
   FROM
     {{ source('microsoft', 'account_history') }} ),
 
-  goals_report AS (
+  goals_and_funnels_daily_report AS (
   SELECT
     DISTINCT SAFE_CAST(device_type AS STRING) DeviceType,
     SAFE_CAST(campaign_id AS STRING) CampaignId,
@@ -83,7 +84,7 @@ WITH
     SAFE_CAST(0 AS STRING) AveragePosition,
     SAFE_CAST(campaign_type AS STRING) CampaignType,
   FROM
-    `au-data-cli-fredhollowsfound.dpl_au_data_cli_fredhollowsfound_bingads.goals_and_funnels_daily_report`
+    {{ source('microsoft', 'goals_and_funnels_daily_report') }}
   LEFT JOIN
     account_history
   USING
@@ -98,6 +99,7 @@ WITH
   USING
     (account_id,
       campaign_id)),
+
   ad_performance_without_goals AS (
   SELECT
     DISTINCT SAFE_CAST(device_type AS STRING) DeviceType,
@@ -144,6 +146,7 @@ WITH
     account_history
   USING
     (account_id))
+
 SELECT
   *
 FROM
@@ -152,4 +155,4 @@ UNION ALL
 SELECT
   *
 FROM
-  goals_report
+  goals_and_funnels_daily_report
