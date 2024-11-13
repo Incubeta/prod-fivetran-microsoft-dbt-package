@@ -3,6 +3,8 @@ sources:
   - name: microsoft
     schema: "{{ var('bingads_schema', target.dataset) }}"
     tables:
+      - name: ad_history
+        identifier: "{{ var('ad_history_identifier', 'ad_history') }}"
       - name: account_history
         identifier: "{{ var('account_history_identifier', 'account_history') }}"
       - name: campaign_history
@@ -11,11 +13,15 @@ sources:
         identifier: "{{ var('keyword_history_identifier', 'keyword_history') }}"
       - name: ad_group_history
         identifier: "{{ var('ad_group_history_identifier', 'ad_group_history') }}"
+      - name: ad_performance_daily_report
+        identifier: "{{ var('ad_performance_daily_report_identifier', 'ad_performance_daily_report') }}"
+      - name: goals_and_funnels_daily_report
+        identifier: "{{ var('goals_and_funnels_daily_report_identifier', 'goals_and_funnels_daily_report') }}"
+      - name: keyword_performance_daily_report
+        identifier: "{{ var('keyword_performance_daily_report_identifier', 'keyword_performance_daily_report') }}"
       - name: campaign_performance_daily_report
         identifier: "{{ var('campaign_performance_daily_report_identifier', 'campaign_performance_daily_report') }}"
       - name: campaign_impression_performance_daily_report
         identifier: "{{ var('campaign_impression_performance_daily_report_identifier', 'campaign_impression_performance_daily_report') }}"
       - name: destination_url_performance_daily_report
         identifier: "{{ var('destination_url_performance_daily_report_identifier', 'destination_url_performance_daily_report') }}"
-      - name: keyword_performance_daily_report
-        identifier: "{{ var('keyword_performance_daily_report_identifier', 'keyword_performance_daily_report') }}"
