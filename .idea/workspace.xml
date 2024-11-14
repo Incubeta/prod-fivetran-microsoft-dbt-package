@@ -49,9 +49,9 @@
     "ACTIVE_CLOUD_PROJECT_NAME": "uk-tech-app-datapipeline-alpha",
     "ACTIVE_CLOUD_PROJECT_NUMBER": "341566395206",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.google.cloudcode.ide_session_index": "20241113_0002",
+    "com.google.cloudcode.ide_session_index": "20241114_0001",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/chigozie/Documents/GitHub/prod-fivetran-microsoft-dbt-package",
+    "last_opened_file_path": "/Users/chigozie/Documents/GitHub/prod-fivetran-microsoft-dbt-package/models/microsoft",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,6 +60,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/models/microsoft" />
+    </key>
+  </component>
   <component name="RunManager" selected="dbt.Run dbt build">
     <configuration name="Run dbt build" type="DbtRunConfiguration" factoryName="DbtRunConfiguration">
       <option name="dbtCommand" value="build" />
@@ -122,7 +127,9 @@
       <workItem from="1730281300596" duration="873000" />
       <workItem from="1730285463818" duration="42000" />
       <workItem from="1731059216983" duration="613000" />
-      <workItem from="1731487066443" duration="1640000" />
+      <workItem from="1731487066443" duration="3689000" />
+      <workItem from="1731509932979" duration="400000" />
+      <workItem from="1731565309048" duration="31000" />
     </task>
     <servers />
   </component>
