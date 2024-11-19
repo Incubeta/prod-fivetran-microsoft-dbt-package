@@ -40,7 +40,7 @@ WITH
     {{ source('microsoft', 'campaign_performance_daily_report') }}
   GROUP BY 1,2,3,4,5,6,7,8,9,10)
 
-SELECT
+SELECT DISTINCT
     SAFE_CAST(A.device_type AS STRING ) DeviceType,
     SAFE_CAST(A.campaign_id AS STRING ) CampaignId,
     SAFE_CAST(conversions AS STRING ) Conversions,
