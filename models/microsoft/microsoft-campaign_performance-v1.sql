@@ -6,7 +6,7 @@
 
 WITH
   campaign_perf_report AS (
-  SELECT
+  SELECT DISTINCT
     device_type,
     campaign_id,
     campaign_name,
@@ -85,7 +85,7 @@ SELECT DISTINCT
 FROM
      campaign_perf_report A
 LEFT JOIN (
-  SELECT
+  SELECT DISTINCT
     name account_name,
     id,
     number account_number,
@@ -103,7 +103,7 @@ LEFT JOIN (
   ON
     A.campaign_id=C.id
 LEFT JOIN (
-  SELECT
+  SELECT DISTINCT
     date,
     account_id,
     campaign_id,

@@ -42,24 +42,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ACTIVE_CLOUD_PROJECT_ACCOUNT&quot;: &quot;chigozie.boniface@incubeta.com&quot;,
-    &quot;ACTIVE_CLOUD_PROJECT_ID&quot;: &quot;uk-data-pipeline-alpha&quot;,
-    &quot;ACTIVE_CLOUD_PROJECT_NAME&quot;: &quot;uk-tech-app-datapipeline-alpha&quot;,
-    &quot;ACTIVE_CLOUD_PROJECT_NUMBER&quot;: &quot;341566395206&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.google.cloudcode.ide_session_index&quot;: &quot;20241115_0004&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/chigozie/Documents/GitHub/prod-fivetran-microsoft-dbt-package/models/microsoft&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ACTIVE_CLOUD_PROJECT_ACCOUNT": "chigozie.boniface@incubeta.com",
+    "ACTIVE_CLOUD_PROJECT_ID": "uk-data-pipeline-alpha",
+    "ACTIVE_CLOUD_PROJECT_NAME": "uk-tech-app-datapipeline-alpha",
+    "ACTIVE_CLOUD_PROJECT_NUMBER": "341566395206",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.google.cloudcode.ide_session_index": "20241223_0001",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/chigozie/Documents/GitHub/prod-fivetran-microsoft-dbt-package/models/microsoft",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/models/microsoft" />
@@ -136,7 +136,8 @@
       <workItem from="1731569769025" duration="1248000" />
       <workItem from="1731681156700" duration="33000" />
       <workItem from="1731681334747" duration="1650000" />
-      <workItem from="1732003665071" duration="324000" />
+      <workItem from="1732003665071" duration="3591000" />
+      <workItem from="1734959146772" duration="36000" />
     </task>
     <servers />
   </component>
