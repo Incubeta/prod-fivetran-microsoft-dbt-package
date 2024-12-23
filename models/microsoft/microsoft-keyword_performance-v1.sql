@@ -4,7 +4,7 @@
     field="TimePeriod")
 }}
 
-SELECT
+SELECT DISTINCT
   SAFE_CAST(device_type AS STRING) DeviceType,
   SAFE_CAST(A.campaign_id AS STRING) CampaignId,
   SAFE_CAST(ad_group_name AS STRING) AdGroupName,
