@@ -6,7 +6,7 @@
 
 WITH
   ad_performance_daily_report AS (
-  SELECT
+  SELECT DISTINCT
     date,
     ad_id,
     account_id,
@@ -50,7 +50,7 @@ WITH
     {{ source('microsoft', 'campaign_history') }} ),
 
   account_history AS (
-  SELECT
+  SELECT DISTINCT
     name account_name,
     id account_id,
     parent_customer_id customer_id,
