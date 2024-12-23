@@ -95,8 +95,8 @@ LEFT JOIN (
   ON
     A.account_id=B.id
 LEFT JOIN (
-  SELECT
-    DISTINCT id,
+  SELECT DISTINCT
+    id,
     type,
   FROM
     {{ source('microsoft', 'campaign_history') }}) C
