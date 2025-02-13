@@ -99,7 +99,8 @@ LEFT JOIN (
     id,
     type,
   FROM
-    {{ source('microsoft', 'campaign_history') }}) C
+    {{ source('microsoft', 'campaign_history') }}
+  where type is not null) C
   ON
     A.campaign_id=C.id
 LEFT JOIN (
