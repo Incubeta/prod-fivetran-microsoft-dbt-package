@@ -6,3 +6,6 @@ models:
   - name: microsoft-keyword_performance-v1
     config:
       event_time: TimePeriod
+  - name: microsoft-ad_performance-v1
+    config:
+      event_time: TimePeriod
