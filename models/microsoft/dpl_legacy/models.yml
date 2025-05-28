@@ -16,6 +16,22 @@ models:
         field: day
         data_type: date
         granularity: day
+  - name: dpl_legacy_microsoft-ad_performance-v1
+    config:
+      schema: PUB_base
+      alias: microsoft-ad_performance-v1
+      materialized: incremental
+      incremental_strategy: microbatch
+      omit_default_schema: true
+      full_refresh: false
+      event_time: day
+      batch_size: day
+      begin: 2025-01-01
+      lookback: "{{var('days_ago', 1)}}"
+      partition_by:
+        field: day
+        data_type: date
+        granularity: day
   - name: dpl_legacy_microsoft-keyword_performance-v1
     config:
       schema: PUB_base
