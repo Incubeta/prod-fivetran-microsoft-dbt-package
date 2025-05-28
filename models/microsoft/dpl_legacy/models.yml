@@ -19,7 +19,7 @@ models:
   - name: dpl_legacy_microsoft-keyword_performance-v1
     config:
       schema: PUB_base
-      alias: microsoft-campaign_performance-v1
+      alias: microsoft-keyword_performance-v1
       materialized: incremental
       incremental_strategy: microbatch
       omit_default_schema: true
