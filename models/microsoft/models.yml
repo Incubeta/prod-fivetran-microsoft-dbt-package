@@ -1,0 +1,8 @@
+version: 2
+models:
+  - name: microsoft-campaign_performance-v1
+    config:
+      event_time: TimePeriod
+  - name: microsoft-keyword_performance-v1
+    config:
+      event_time: TimePeriod
