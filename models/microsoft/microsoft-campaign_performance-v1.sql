@@ -4,6 +4,8 @@
     field="TimePeriod")
 }}
 
+{%- set columns = dbt_utils.get_filtered_columns_in_relation(from=source('microsoft', 'campaign_performance_daily_report')) -%}
+
 WITH
   campaign_perf_report AS (
   SELECT DISTINCT
@@ -14,7 +16,11 @@ WITH
     currency_code,
     account_id,
     ad_distribution,
-    custom_parameters,
+    {% if 'custom_parameters' in columns -%}
+      custom_parameters
+    {% else %}
+      NULL as custom_parameters
+    {% endif %},
     network,
     date,
     SUM(clicks) clicks,
